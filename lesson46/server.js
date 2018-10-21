@@ -14,6 +14,7 @@ hbs.registerHelper('screamIt', (text) => {
 
 /* express configs*/
 app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
 
 /* middlewers*/
 app.use((req, res, next) => {

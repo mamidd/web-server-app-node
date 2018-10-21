@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+console.log('DIRNAME>>>>>>>', __dirname);
+
 const port = process.env.PORT || 3000;
 let app = express();
 
@@ -14,6 +16,7 @@ hbs.registerHelper('screamIt', (text) => {
 
 /* express configs*/
 app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
 
 /* middlewers*/
 app.use((req, res, next) => {
